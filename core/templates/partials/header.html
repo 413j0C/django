@@ -1,0 +1,33 @@
+<header>
+    <style>
+        .bgcolor{
+            background-color: #e6ca77;
+        }
+
+        @media screen and (min-width: 480px) {
+       
+
+        .container-fluid{
+            background-size: cover;
+        }
+    }
+
+        @media screen and (max-width: 425px) {
+        .container-fluid{
+            background-size: cover;
+            }
+        }
+        
+    </style>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6 bgcolor">
+                {% load static %}
+                <img src="{% static  'img/logo nuevo 2022.png' %}" alt="logo_contraloria">
+            </div>
+            <div class="col-6 bgcolor text-end ">
+                <img src="{% static  'img/Escudo.png' %}" alt="escudo_colombia">
+            </div>
+        </div>
+    </div>
+</header>
