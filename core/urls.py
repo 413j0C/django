@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from .views import index, salir, formato
 from django.contrib.auth import views as auth_views
+from activos.views import RegistroActivos
 
 urlpatterns =[
     path('admin/', admin.site.urls),

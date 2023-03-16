@@ -4,7 +4,7 @@ from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from usuarios.forms import UsuarioForm
 
-@login_required(login_url='inicio')
+#@login_required(login_url='inicio')
 def index(requests):
     form = UsuarioForm
     titulo= 'Bienvenido'
@@ -22,4 +22,3 @@ def salir(request):
 
 def formato(request):
     return render(request,'formato.html')
-

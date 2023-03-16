@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import TipoForm, SoftwareForm, HardwareForm,TipoActivoForm
 from django.contrib.auth.decorators import login_required
 # Create your views here.
-@login_required(login_url='inicio')
+#@login_required(login_url='inicio')
 def tipo_activo(request):
     titulo="Tipo Activo"
     form= TipoForm()
@@ -19,7 +19,7 @@ def tipo_activo(request):
         else:
             return redirect('software')
     
-@login_required(login_url='inicio')
+#@login_required(login_url='inicio')
 def software(request):
     titulo= "formulario Software"
     form= SoftwareForm()
@@ -30,7 +30,7 @@ def software(request):
     return render(request, 'activos/software.html', context)
 
 
-@login_required(login_url='inicio')
+#@login_required(login_url='inicio')
 def hardware(request):
     titulo= "formulario Hardware"
     form= HardwareForm()
@@ -40,7 +40,7 @@ def hardware(request):
     }
     return render(request, 'activos/hardware.html', context)
 
-@login_required(login_url='inicio')
+#@login_required(login_url='inicio')
 def unido(request):
     titulo="Tipo Activo"
     form= TipoForm()
@@ -77,7 +77,7 @@ def unido(request):
         
       
         
-@login_required(login_url='inicio')
+#@login_required(login_url='inicio')
 def TipoActivo(request):
     form= TipoActivoForm()
     titulo="Modificado Tipo Activo"
@@ -97,4 +97,7 @@ def TipoActivo(request):
                  'form2': form2
                 }
         return render (request,'activos/info_Activo.html', context)
+    
+def RegistroActivos(request):
+    return render(request,'activos/registroActivos.html')
         

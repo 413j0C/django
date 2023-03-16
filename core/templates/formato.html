@@ -6,69 +6,177 @@
 <head>
     <meta charset="utf-8" />
     <title>Se debe seleccionar los campos HTML para convertir a PDF</title>
-</head>
+    <style>
 
-<div class="row">
+@media (max-width: 767.98px){
+    .flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+    }
     
-<div class="container shadow w-50 h-80 text-center rounded mb-5 d-flex justify-content-center ">
-    <div class="row card mt-2" style="width: 50%;">
-        <div class="col-md-6"></div>
-        <div class="card"></div>
-        <img src="/static/img/Profile.png" alt="Imagen Perfil" class="card-img-top img-fluid>
-        <div class="card-body">
-            <div class="card-title">
-                <div style="width: 20px">
-                    <div class="row">  
-                        <div class="col d-flex">
-                          <label for="firstname">Nombre</label>
-                        </div>
-                            <div class="input-group input-group-sm">
-                                <input id="registrar" data-pdf-form-field="true" type="text" name="firstname" placeholder="Ingrese Nombre" required>  
-                            </div>
-                        </div>
+    .flex-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        
+    }
+    
+    .correo {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .at-2 {
+        max-width: 12.5rem; /* 200px*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    input {
+        max-width: 8.75rem; /* 140px */
+    }
+
+    .select {
+        max-width: 8.75rem;
+        
+    }
+
+
+
+    .identity {
+        max-width: 8.75rem;
+    }
+
+}
+
+@media (min-width: 320px){
+    .flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flex-main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .correo{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .at-2{
+        max-width: 12.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input{
+        max-width: 8.75rem;
+    }
+
+    .select{
+        max-width: 8.75rem;
+    }
+
+    .identity{
+        max-width: 8.75rems;
+    }
+
+    
+}
+    </style>
+</head> 
+
+
+    <div class="container shadow w-50 h-80 text-center rounded mb-5 d-flex">
+    <div class="row card text-center justify-content-center align-items-center mt-2 mr-80" style="width: 100%;">
+        <div class="col-md-6">
+        <img src="/static/img/Profile.png" alt="Imagen Perfil" class="card-img-top img-fluid text-center">
+                <div class="" >
+                    <div class="flex">
                         <div class="row">
-                            <div class="col-sm-12 col-md-6">
-                                <label for="document-type">Tipo Documento</label>
-                            </div>
-                            <div class="col-sm-12 col-md-6">
-                                <select required class="d-block mt-2">
-                                    <option value="tarjeta_identidad" selected="selected">Tarjeta Identidad</option>
-                                    <option value="cedula_cuidadania">Cedula Cuidadania</option>
-                                    <option value="cedula_extranjeria">Cedula Extranjeria</option>
-                                </select>
+                            <div class="flex">
+                                <label for="firstName">Nombre</label>
+                                <div>
+                                    <div class="input-group">
+                                        <input type="text" name="firstName" placeholder="ingresa Nombre" required>
+                                    </div>
+                                </div>
+
+                                <br>
+
+                                <div class="row flex">
+                                    <div class="col-sm-12 col-md-6">
+                                        <label for="">Tipo de documento</label>
+                                    </div>
+
+                                    <br>
+
+                                    <div class="col-sm-12 col-md-6 flex">
+                                        <select name="" required class=" at-2 select">         
+                                            <option value="" selected>Tarjeta identidad</option>
+                                            <option value="">Cedula de identidad</option>
+                                            <option value="">Cedula extranjera</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <br>
+
+                                <div class="row  flex">
+                                    <div class="col-sm-12 col-md-6">
+                                        <label for="" class="text-center">Numero Identidad</label>
+                                    </div>
+
+                                    <br>
+
+                                    <div class="input-group input-group-sm">
+                                        <input type="number" class="form-control form-control-lg nb-2 identity" required placeholder="ingrese identidad">
+                                    </div>
+                                </div>
+
+                                <br>
+
+                                <div class="row flex">
+                                    <div class="col-sm-12 col-md-6 flex">
+                                        
+                                        <label for="" class="correo">Correo</label>
+                                    </div>
+
+                                    <div class="input-group inpuy-group-sm">
+                                        <input type="email" placeholder="ingrese correo">
+                                    </div>
+                                </div>
+
+                                <br>
+
+                                <div class="row flex">
+                                    <div class="col-sm-12 col-md-6 d-flex at-2">
+                                        <input type="submit" class="text-center btn-success">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6 d-flex">
-                                <label class="text-center" for="numero_identidad">Numero Identidad</label>
-                            </div>
-                                <div class="input-group input-group-sm"> 
-                                    <input id="registrar" class="form-control form-control-lg mb-2" data-pdf-form-field="true" type="text" name="numero_identidad" placeholder= "Ingrese Numero Identidad">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 col-md-6 d-flex">
-                                  <label for="email">Correo</label>
-                                </div>
-                                <div class="input-group input-group-sm">
-                                    <input id="registrar" data-pdf-form-field="true" type="email" name="email" placeholder="Ingrese Correo" required>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 col-md-6 d-flex mt-2">
-                                    <input onclick="enableInputs()" id="registrar" class="text-center btn-success" data-pdf-form-field="true" role="button" name="submitButton" value="Registrar">
-                                </div>
-                                <!--<td colspan="2">
-                                    <input onclick="disableInputs()" id="registrar" class="text-center btn-success" data-pdf-form-field="true" role="button" name="submitButton" value="Editar">
-                                </td>-->
-                            </div>
-                            </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 
 <script>

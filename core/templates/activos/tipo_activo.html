@@ -3,11 +3,17 @@
 
 {% block content %}
     {% load crispy_forms_tags %}
-    <h1>Seleccione tipo de activo</h1>
-        <form method="POST">
-        {% csrf_token %}
-        {{form}}
-        <button class="btn btn-success">Continuar</button>
-    </form>
+<div class="container" style="height: 100%;">
+    <div class="row">
+        <div class="col">
+            <h1>Seleccione tipo de activo</h1>
+                <form method="POST">
+                {% csrf_token %}
+                {{form}}
+                <button class="btn btn-success mt-2">Continuar</button>
+                </form>
+        </div>
+    </div>
+ </div>
 {% endblock content %}
     

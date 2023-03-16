@@ -1,29 +1,56 @@
 {% extends 'partials/body.html' %}
 
- 
  {% block head %}   
-        <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"> 
+
  {% endblock head %}
     
 {% block content %}
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.bootstrap5.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
     {% load crispy_forms_tags %}
-    <h1>Seleccione tipo de activo</h1>
-    <form method="POST">
-        {% csrf_token %}
-        {{form}}
-        <button class="btn btn-success">Continuar</button>
-    </form>
 
-<table id="activos" class="display" style="width:100%">
-    <thead>
-      <tr>
-        <th scope=col>Nro</th>
-        <th scope="col"> Marca</th>
-        <th scope="col">Nro de serie</th>
-        <th hscope="col">Tipo de activo</th>
-      </tr>
-    </thead>
-    <tbody>
+<style>
+@media (min-width: 310px) and (max-width: 512px){
+
+  tr th{
+    flex-direction: column;
+    
+  }
+
+  button{
+    flex-direction: column;
+  }
+}
+
+</style>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Seleccione tipo de activo</h1>
+        <form  method="POST">
+          {% csrf_token %}
+          {{form}}
+          <button class="btn btn-success mt-2">Continuar</button>
+        </form>
+    </div>
+  </div>
+</div>
+
+<table id="activos" class="table table-striped" style="width:100%">
+  <thead>
+      <div class="row">
+        <tr>
+          <th class="col-sm-3 col-3 mt-2 d-flex-inline text-center" scope=col>Nro</th>
+          <th class="col-sm-3 col-3 mt-2 d-flex-inline text-center" scope="col"> Marca</th>
+          <th class="col-sm-3 col-3 mt-2 d-flex-inline text-center" scope="col">Nro de serie</th>
+          <th class="col-sm-3 col-3 mt-2 d-flex-inline text-center" hscope="col">Tipo de activo</th>
+        </tr>
+      </div>
+  </thead>
+<tbody>
     {% for activo in activos %}
     <tr>            
         <td>{{activo.id}}</td>
@@ -33,7 +60,7 @@
     </tr> 
     {% endfor %}
 
-  </tbody>
+</tbody>
 </table>
 {% include 'partials/js.html' %}    
 {% endblock content %}

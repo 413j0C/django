@@ -5,7 +5,7 @@ from .models import TipoActivo
 from django.contrib import messages
 # Create your views here.
 
-@login_required(login_url='inicio')
+#@login_required(login_url='inicio')
 def registrar_activo(request):
     titulo="Registrar activo"
     form= TipoActivoForm()
