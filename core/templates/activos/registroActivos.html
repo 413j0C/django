@@ -1,0 +1,85 @@
+{% extends 'partials/body.html' %}
+
+<h1>tratar de unir</h1>
+
+{% block content %}
+
+<div class="col-md-8">
+    <div class="card p-3">
+        <div class="card-header">
+            <h3 class="card-title">Activos</h3>
+        </div>
+
+<div class="card-body text-center" style="text-align: center; width: 100%;">
+    <div class="col py-3 text-center">
+        <div class="col-md-8">
+            <div class="card p-3">
+                <div class="card-header">
+                    <h3 class="card-title">Software</h3>
+                </div>
+                
+<div class="card-body text-center" style="text-align: center; width: 100%;">
+        <div class="col-sm-8">
+            <div id="div_id_sistema_operativo" class="mb-3"></div>
+            <div id="div_id_version_sistema_ope" class="mb-3">
+                <label for="id_version_sistema_op" class="form-label requiredField">
+                    <span class="asteriskField">*</span>Versión sistema operativo*</label>
+            </div>
+        <div id="div_id_ofimatica" class="mb-3"></div>
+        <label for="id_version_ofimatica" class="form-label requiredField">
+            <span class="asteriskField">*
+                </span>Versión ofimatica*</label>
+        <div id="div_id_antivirus" class="mb-3">
+            <label for="id_antivirus" class="form-label requiredField">
+                <span class="asteriskField">*</span>Antivirus*</label>
+        </div>
+        <div id="div_id_navegador" class="mb-3">
+            <label for="id_navegador" class="form-label requiredField">
+                <span class="asteriskField">*</span>Navegador*</label>
+        </div>
+        <div id="div_id_navegador2" class="mb-3">
+            <label for="id_navegador2" class="form-label requiredField">
+                <span class="asteriskField">*</span>Navegador2*</label>
+        </div>
+        <div id="div_id_herramienta_cloud" class="mb-3">
+            <label for="id_herramienta_cloud" class="form-label requiredField">
+                <span class="asteriskField">*</span>Herramientas Cloud*</label>
+        </div>
+</div>
+            <div class="btn btn-primary">Editar</div>
+        </div>
+    </div>
+</div>
+<div class="row ">
+<div class="col-md-8">
+    <div class="card p-3">
+        <div class="card-header">
+            <h3 class="card-title">Hardware</h3>
+        </div>
+                                    
+        <div class="card-body">
+            <div class="col-sm-8 justify-content-center" style="text-align: center; width: 100%;">
+                <div>
+                    <div class="col-sm-8">
+                        <div id="div_id_modelo" class="mb-3">
+                            <label for="id_modelo" class="form-label requiredField">
+                                Modelo<span class="asteriskField">*</span> </label>
+                        </div>
+                        <div id="div_id_capacidad" class="mb-3">
+                            <label for="id_modelo" class="form-label requiredField">
+                                Capacidad<span class="asteriskField">*</span> </label>
+                        </div>
+                        <div id="div_id_noAplica" class="mb-3">
+                            <label for="id_modelo" class="form-label requiredField">
+                                noAplica<span class="asteriskField">*</span> </label>
+                        </div>
+                    </div>
+                    <div class="btn btn-primary">Editar</div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock content %}
