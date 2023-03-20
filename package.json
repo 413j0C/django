@@ -1,0 +1,17 @@
+{
+    "name": "my-project",
+    "source": "/core/templates/dashboard/panelAdministracion.html",
+    "license": "MIT",
+    "private": true,
+    "browserslist": "> 0.5%, last 2 versions, not dead",
+    "scripts": {
+      "start": "parcel",
+      "build": "parcel build --no-source-maps"
+    },
+    "devDependencies": {
+      "parcel": "latest"
+    },
+    "dependencies": {
+      "chart.js": "^4.2.1"
+    }
+  }
