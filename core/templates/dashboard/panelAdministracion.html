@@ -3,27 +3,76 @@
    <head>
       <meta charset="utf-8">
       <title>title</title>
-      <link rel="stylesheet" href="/static/css/main.css">
+      <link rel="stylesheet" href="/static/css/graficoChart.css">
   </head>
-  <script type="module" src="/static/js/chart.js"></script>
+  
   </script>
 <body>
-    <div class="row d-flex panel_graficos">
-        <div class="container col-4 left" width="350" auto="400">
-            <canvas id="registros_total_activos"></canvas>
-         </div>
-         <div class="container right col-4" width="400" auto="400">
-            <canvas id="registro_total_usuarios"></canvas>
-         </div>
-         <div class="container right col-4" width="400" auto="400">
-            <canvas id="registro_total_software"></canvas>
-         </div>
-         <div class="container right col-4" width="400" auto="400">
-            <canvas id="registro_total_hardware"></canvas>
-         </div>
+    <div class="row d-flex ">
+      <div class="page">
+        <div class="left">
+            <canvas class="container" 
+                id="grafico1"></canvas>
+        </div>
+        <div class="right">
+            <canvas class="container" 
+                id="grafico2"></canvas>
+        </div>
+    </div>
     </div>
 </body>
-<script type="module" src="/static/js/panel_graficos.js"></script>
+<script type="module" src="/static/js/chart.js"></script>
+<script>
+
+  const grafico1 = document.getElementById("grafico1")
+  
+  new Chart(grafico1, {
+    type: 'doughnut',
+    labels: ['China', 'EEUU', 'Rusia', 'Alemania', 'India', 'Brasil'],
+        datasets: [{
+          label: 'cantidad Personas',
+          
+          data: [4500000,250000 ,3000000 ,24000000 ,60000000 ,1500000 ],
+          borderWidth: 1,
+          borderColor: '#36A2EB',
+          backgroundColor: [
+          "rgb(0, 123, 177)",
+          "rgb(74, 136, 162)",
+          "rgb(176, 211, 228)",
+          "rgb(250, 172, 130)",
+          "rgb(187, 90, 44)",
+          "rgb(127, 90, 44)"
+        ]
+        
+        }]
+      });
+
+      const grafico2 = document.getElementById("grafico2")
+  
+    new Chart(grafico2, {
+    type: 'doughnut',
+    labels: ['China', 'EEUU', 'Rusia', 'Alemania', 'India', 'Brasil'],
+        datasets: [{
+          label: 'cantidad Personas',
+          
+          data: [4500000,250000 ,3000000 ,24000000 ,60000000 ,1500000 ],
+          borderWidth: 1,
+          borderColor: '#36A2EB',
+          backgroundColor: [
+          "rgb(0, 123, 177)",
+          "rgb(74, 136, 162)",
+          "rgb(176, 211, 228)",
+          "rgb(250, 172, 130)",
+          "rgb(187, 90, 44)",
+          "rgb(127, 90, 44)"
+        ]
+        
+        }]
+      });
+    
+
+
+  
+  </script>
 </html>
-<!DOCTYPE html>
-<html>
+
