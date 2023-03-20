@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'bootstrap_modal_forms',#pip install django-bootstrap-modal-forms
     'activos',
     'activo',
+    "administrador",
     
 ]
 MIDDLEWARE = [

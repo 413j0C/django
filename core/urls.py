@@ -17,7 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 from .views import index, salir, formato
 from django.contrib.auth import views as auth_views
-from activos.views import RegistroActivos
 
 urlpatterns =[
     path('admin/', admin.site.urls),
@@ -32,5 +31,6 @@ urlpatterns =[
     path("salir/", salir, name='salir'),
     path('usuarios/',include('usuarios.urls')),
     path('activos/',include('activos.urls')),
-    path('activo/',include('activo.urls'))
+    path('activo/',include('activo.urls')),
+    path('administrador/',include('administrador.urls')),
 ]
