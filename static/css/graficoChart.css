@@ -1,20 +1,56 @@
-body {
-  margin: 0;
+*{
   padding: 0;
+  margin: 0;
 }
 
-.panel_graficos {
+.bgnavbar{
+  background: #F8F0FB;
+  width: 100%;
+}
+
+section{
+  height: 100vh;
+}
+nav {
+  width: 10%;
+}
+section, .card{
   display: flex;
-  justify-content: center;
 }
 
-.left {
-  width: 50%;
-  height: 100%;
+.card {
+position: absolute;
+right: 60%;
+top: 10px;
+bottom: 0;
+width: 30%;
+height: auto;
+padding: 10px;
+flex-wrap: nowrap;
+justify-content: space-between;
 }
-.right {
-  width: 30%;
-  height: 100%;
+.card-header{
+  height: 50px;
+}
+.card-body{
+margin-bottom: 5px;
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+margin: 10px,20px,10px;
+
+}
+
+.card-title{
+font-size: 14px;
+align-items: flex-start;
+height: 100px;
+}
+
+canvas{
+justify-content: center;
+width: 400px;
+height: auto;
 }
 
 
