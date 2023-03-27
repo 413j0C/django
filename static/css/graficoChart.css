@@ -29,3 +29,14 @@ font-size: 20px;}
   border: 1px solid #e6ca77;
 }
 
+.card-header h2 {
+  font-size: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .card-header h2 {
+    font-size: 1.5rem;
+    height: 20px;
+  }
+}
+
