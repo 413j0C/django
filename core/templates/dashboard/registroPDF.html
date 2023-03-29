@@ -1,0 +1,177 @@
+{% load bootstrap5 %}
+{% bootstrap_css %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formato Activo PDF</title>
+    <link rel="stylesheet" type="text/html" href="/Content/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src=" https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"></script>
+</head>
+<style>
+    td {
+        padding: 8px;
+
+    }
+
+    .table_row:nth-child(even) {
+        background-color: #e6ca77;
+
+
+    }
+
+    .btn:active {}
+
+    .btn:hover {}
+
+    th {
+        margin: 2, 4, 2;
+        text-transform: uppercase;
+    }
+</style>
+
+
+<body>
+
+    <img class="img-fluid" src="/static/img/logo nuevo 2022.png" alt="logo" style="width:120px;">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="d-flex justify-content-sm-center justify-content-md-center table-responsive mt-5">
+                    <h2>Activo Software</h2>
+                    <img clas2="w-50" src="/static/img/codespaces.svg" alt="Computador"></img>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table id="registro_software" class=" vh-50 display compact table-bordered border-secondary-subtled mx-auto mt-4" style="width:80%">
+        <thead class="table_header">
+            <tr class="table_row">
+                <th>Sistema Operativo</th>
+                <th>Version Sistema Operativo</th>
+                <th>Ofimatica</th>
+                <th>Version Ofimatica</th>
+                <th>Antivirus</th>
+                <th>Navegador</th>
+                <th>Navegador2</th>
+                <th>Herramientas Cloud</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table_row">
+                <td>Windows</td>
+                <td>Windows 10</td>
+                <td>Microsoft office</td>
+                <td>365</td>
+                <td>avast</td>
+                <td>microsoft edge</td>
+                <td>opera</td>
+                <td>google drive</td>
+            </tr>
+            <tr class="table_row">
+                <td>Windows</td>
+                <td>Windows 7</td>
+                <td>Microsoft office</td>
+                <td>365</td>
+                <td>endpoint</td>
+                <td>microsoft edge</td>
+                <td>google chrome</td>
+                <td>one drive</td>
+            </tr>
+            <tr class="table_row ">
+                <td>Linux</td>
+                <td>ubuntu</td>
+                <td>Open office</td>
+                <td>4.1.2</td>
+                <td>kaspersky</td>
+                <td>opera</td>
+                <td>mozilla firefox</td>
+                <td>amazon cloud</td>
+            </tr>
+            <tr class="table_row ">
+                <td>Linux</td>
+                <td>manjaro</td>
+                <td>libre office</td>
+                <td>7.3.1</td>
+                <td>malwarebytes</td>
+                <td>mozilla firefox</td>
+                <td>opera</td>
+                <td>dropbox</td>
+            </tr>
+            <tr class="table_row">
+                <td>Mac</td>
+                <td>catalina</td>
+                <td>7.3.5</td>
+                <td>bullguard</td>
+                <td>Safari</td>
+                <td>one drive</td>
+                <td>mozilla firefox</td>
+                <td>amazon cloud</td>
+            </tr>
+            <tr class="table_row">
+                <td>mac</td>
+                <td>monterrey</td>
+                <td>open office</td>
+                <td>7.3.5</td>
+                <td>avg</td>
+                <td>safari</td>
+                <td>mozilla firefox</td>
+                <td>amazon cloud</td>
+            </tr>
+            </tfoot>
+    </table>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="d-flex justify-content-center justify-content-sm-center justify-content-md-center text-center table-responsive mt-4">
+                    <h2>Activo Hardware</h2>
+                    <img src="/static/img/codespaces.svg" alt="Computador"></img>
+                </div>
+
+
+                <table id="registro_hardware" class=" vh-50 display compact table-bordered border-secondary-subtled mx-auto mt-4"
+                    style="width:90%">
+                    <thead class="table_header">
+                        <tr class="table_row">
+                            <th>capacidad</th>
+                            <th>no aplica</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table_row">
+                            <td>hsdasda</td>
+                            <td>dasdasddsa</td>
+                            <td>asdasdasd</td>
+                        </tr>
+                        <tr class="table_row">
+                            <td>intel I5 1450</td>
+                            <td>250</td>
+                            <td>no aplica</td>
+                        </tr>
+                        </tfoot>
+            </div>
+        </div>
+    </div>
+    </table>
+    <div class="btn-group btn d-flex justify-content-center" role="group" aria-label="button exportar">
+        <button src="" type="submit" class="btn-primary"><i class="bi bi-file-earmark-pdf-fill"></i>
+        </button>
+        <button type="button" class="btn btn btn-warning"><i class="fa-regular fa-file-pdf"></i></button>
+    </div>
+  
+    
+</body>
+
+
+
+</html>
