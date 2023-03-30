@@ -9,12 +9,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formato Activo PDF</title>
-    <link rel="stylesheet" type="text/html" href="/Content/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.dataTables.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-    <script src=" https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-    <script src=" https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"></script>
+    <script src="/static/jquery/jquery.min.js"></script>
+    <link rel="stylesheet" href="/static/css/Responsive-2.4.1/css/responsive.bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="/static/css/Buttons-2.3.6/css/buttons.bootstrap5.min.css">
+    <link rel="stylesheet" src="/static/js/datatables.min.js">
+    </script>
+
+
 </head>
 <style>
     td {
@@ -27,10 +29,14 @@
 
 
     }
+    
 
-    .btn:active {}
+    .btn {
+        display: block;
+        justify-content: center;
+        
+    }
 
-    .btn:hover {}
 
     th {
         margin: 2, 4, 2;
@@ -47,13 +53,14 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="d-flex justify-content-sm-center justify-content-md-center table-responsive mt-5">
-                    <h2>Activo Software</h2>
+                    <h2>Activos</h2>
                     <img clas2="w-50" src="/static/img/codespaces.svg" alt="Computador"></img>
                 </div>
             </div>
         </div>
     </div>
-    <table id="registro_software" class=" vh-50 display compact table-bordered border-secondary-subtled mx-auto mt-4" style="width:80%">
+    <table id="registro" class=" vh-50 display compact table-bordered border-secondary-subtled mx-auto mt-4"
+        style="width:80%">
         <thead class="table_header">
             <tr class="table_row">
                 <th>Sistema Operativo</th>
@@ -128,50 +135,42 @@
                 <td>amazon cloud</td>
             </tr>
             </tfoot>
-    </table>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="d-flex justify-content-center justify-content-sm-center justify-content-md-center text-center table-responsive mt-4">
-                    <h2>Activo Hardware</h2>
-                    <img src="/static/img/codespaces.svg" alt="Computador"></img>
-                </div>
+            <table id="registro" class="vh-50 display compact table-bordered border-secondary-subtled mx-auto mt-4"
+                style="width:90%">
+                <thead class="table_header">
+                    <tr class="table_row">
+                        <th>capacidad</th>
+                        <th>no aplica</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table_row">
+                        <td>hsdasda</td>
+                        <td>dasdasddsa</td>
+                        <td>asdasdasd</td>
+                    </tr>
+                    <tr class="table_row">
+                        <td>intel I5 1450</td>
+                        <td>250</td>
+                        <td>no aplica</td>
+                    </tr>
+                    </tfoot>
+                    </div>
+                    </div>
+                    </div>
+            </table>
+            
+    <script src="/static/js/datatables.min.js"></script>
+    <script src="/static/js/Buttons 2.3.6/buttons.bootstrap.min.js"></script>
+    <script src="/static/js/JSZip-2.5.0/jszip.min.js"></script>
+    <script src="/static/js/pdfmake-0.1.36/pdfmake.min.js"></script>
+    <script src="/static/js/pdfmake-0.1.36/vfs_fonts.js"></script>
+    <script src="/static/js/Buttons 2.3.6/buttons.html5.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
-
-                <table id="registro_hardware" class=" vh-50 display compact table-bordered border-secondary-subtled mx-auto mt-4"
-                    style="width:90%">
-                    <thead class="table_header">
-                        <tr class="table_row">
-                            <th>capacidad</th>
-                            <th>no aplica</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="table_row">
-                            <td>hsdasda</td>
-                            <td>dasdasddsa</td>
-                            <td>asdasdasd</td>
-                        </tr>
-                        <tr class="table_row">
-                            <td>intel I5 1450</td>
-                            <td>250</td>
-                            <td>no aplica</td>
-                        </tr>
-                        </tfoot>
-            </div>
-        </div>
-    </div>
-    </table>
-    <div class="btn-group btn d-flex justify-content-center" role="group" aria-label="button exportar">
-        <button src="" type="submit" class="btn-primary"><i class="bi bi-file-earmark-pdf-fill"></i>
-        </button>
-        <button type="button" class="btn btn btn-warning"><i class="fa-regular fa-file-pdf"></i></button>
-    </div>
-  
-    
+    <script type="text/javascript" src="/static/js/buttons.js"></script>
 </body>
-
-
 
 </html>
