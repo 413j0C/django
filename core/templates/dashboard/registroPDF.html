@@ -19,29 +19,55 @@
 
 </head>
 <style>
+    .btn {
+        margin-right: 10px;
+        max-width: 150px;
+        min-width: auto;
+    }
+
+
+    .dataTables_info {
+        display: flex;
+        justify-content: center;
+    }
+
+    .dataTables_paginate {
+        display: flex;
+        justify-content: center;
+    }
+
+    .dataTables_length {
+        display: flex;
+        justify-content: center;
+    }
+
+    .dataTables_filter {
+    display: flex;
+    justify-content: center;
+    margin: 20px 10px 20px;
+    
+}
+.dataTables_filter input {
+    text-align: end;
+}
+
+    .dt-buttons {
+        display: flex;
+        justify-content: center;
+    }
+
     td {
         padding: 8px;
-
     }
 
     .table_row:nth-child(even) {
         background-color: #e6ca77;
-
-
     }
-    
-
-    .btn {
-        display: block;
-        justify-content: center;
-        
-    }
-
-
     th {
         margin: 2, 4, 2;
         text-transform: uppercase;
     }
+    
 </style>
 
 
@@ -51,10 +77,10 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
-                <div class="d-flex justify-content-sm-center justify-content-md-center table-responsive mt-5">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="d-flex justify-content-center table-responsive mt-5">
                     <h2>Activos</h2>
-                    <img clas2="w-50" src="/static/img/codespaces.svg" alt="Computador"></img>
+                    <img class="w-20" src="/static/img/codespaces.svg" alt="Computador"></img>
                 </div>
             </div>
         </div>
@@ -140,6 +166,7 @@
                 style="width:90%">
                 <thead class="table_header">
                     <tr class="table_row">
+                        <th>modelo</th>
                         <th>capacidad</th>
                         <th>no aplica</th>
                     </tr>
@@ -160,17 +187,18 @@
                     </div>
                     </div>
             </table>
-            
-    <script src="/static/js/datatables.min.js"></script>
-    <script src="/static/js/Buttons 2.3.6/buttons.bootstrap.min.js"></script>
-    <script src="/static/js/JSZip-2.5.0/jszip.min.js"></script>
-    <script src="/static/js/pdfmake-0.1.36/pdfmake.min.js"></script>
-    <script src="/static/js/pdfmake-0.1.36/vfs_fonts.js"></script>
-    <script src="/static/js/Buttons 2.3.6/buttons.html5.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
-    <script type="text/javascript" src="/static/js/buttons.js"></script>
+            <script src="/static/js/datatables.min.js"></script>
+            <script src="/static/js/Buttons 2.3.6/buttons.bootstrap.min.js"></script>
+            <script src="/static/js/JSZip-2.5.0/jszip.min.js"></script>
+            <script src="/static/js/pdfmake-0.1.36/pdfmake.min.js"></script>
+            <script src="/static/js/pdfmake-0.1.36/vfs_fonts.js"></script>
+            <script src="/static/js/Buttons 2.3.6/buttons.html5.min.js"></script>
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+                integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+                crossorigin="anonymous">
+
+            <script type="text/javascript" src="/static/js/buttons.js"></script>
 </body>
 
 </html>
