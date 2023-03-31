@@ -42,14 +42,14 @@
     }
 
     .dataTables_filter {
-    display: flex;
-    justify-content: center;
-    margin: 20px 10px 20px;
-    
-}
-.dataTables_filter input {
-    text-align: end;
-}
+        display: flex;
+        justify-content: center;
+        margin: 20px 10px
+    }
+
+    .dataTables_filter input {
+        text-align: end;
+    }
 
     .dt-buttons {
         display: flex;
@@ -63,11 +63,11 @@
     .table_row:nth-child(even) {
         background-color: #e6ca77;
     }
+
     th {
         margin: 2, 4, 2;
         text-transform: uppercase;
     }
-    
 </style>
 
 
@@ -85,10 +85,11 @@
             </div>
         </div>
     </div>
-    <table id="registro" class=" vh-50 display compact table-bordered border-secondary-subtled mx-auto mt-4"
+
+    <table id="registro" class="vh-50 display compact table-bordered border-secondary-subtled mx-auto mt-4"
         style="width:80%">
         <thead class="table_header">
-            <tr class="table_row">
+            <tr class="table_row" col->
                 <th>Sistema Operativo</th>
                 <th>Version Sistema Operativo</th>
                 <th>Ofimatica</th>
@@ -97,6 +98,9 @@
                 <th>Navegador</th>
                 <th>Navegador2</th>
                 <th>Herramientas Cloud</th>
+                <th>modelo</th>
+                <th>capacidad</th>
+                <th>no aplica</th>
             </tr>
         </thead>
         <tbody>
@@ -109,6 +113,9 @@
                 <td>microsoft edge</td>
                 <td>opera</td>
                 <td>google drive</td>
+                <td>intel I5 1450</td>
+                <td>250</td>
+                <td>no aplica</td>
             </tr>
             <tr class="table_row">
                 <td>Windows</td>
@@ -119,6 +126,9 @@
                 <td>microsoft edge</td>
                 <td>google chrome</td>
                 <td>one drive</td>
+                <td>intel I5 1450</td>
+                <td>250</td>
+                <td>no aplica</td>
             </tr>
             <tr class="table_row ">
                 <td>Linux</td>
@@ -129,6 +139,9 @@
                 <td>opera</td>
                 <td>mozilla firefox</td>
                 <td>amazon cloud</td>
+                <td>intel I5 1450</td>
+                <td>250</td>
+                <td>no aplica</td>
             </tr>
             <tr class="table_row ">
                 <td>Linux</td>
@@ -139,6 +152,9 @@
                 <td>mozilla firefox</td>
                 <td>opera</td>
                 <td>dropbox</td>
+                <td>intel I5 1450</td>
+                <td>250</td>
+                <td>no aplica</td>
             </tr>
             <tr class="table_row">
                 <td>Mac</td>
@@ -149,6 +165,9 @@
                 <td>one drive</td>
                 <td>mozilla firefox</td>
                 <td>amazon cloud</td>
+                <td>intel I5 1450</td>
+                <td>250</td>
+                <td>no aplica</td>
             </tr>
             <tr class="table_row">
                 <td>mac</td>
@@ -159,35 +178,14 @@
                 <td>safari</td>
                 <td>mozilla firefox</td>
                 <td>amazon cloud</td>
+                <td>intel I5 1450</td>
+                <td>250</td>
+                <td>no aplica</td>
             </tr>
             </tfoot>
 
-            <table id="registro" class="vh-50 display compact table-bordered border-secondary-subtled mx-auto mt-4"
-                style="width:90%">
-                <thead class="table_header">
-                    <tr class="table_row">
-                        <th>modelo</th>
-                        <th>capacidad</th>
-                        <th>no aplica</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="table_row">
-                        <td>hsdasda</td>
-                        <td>dasdasddsa</td>
-                        <td>asdasdasd</td>
-                    </tr>
-                    <tr class="table_row">
-                        <td>intel I5 1450</td>
-                        <td>250</td>
-                        <td>no aplica</td>
-                    </tr>
-                    </tfoot>
-                    </div>
-                    </div>
-                    </div>
-            </table>
-
+           
+        </table>
             <script src="/static/js/datatables.min.js"></script>
             <script src="/static/js/Buttons 2.3.6/buttons.bootstrap.min.js"></script>
             <script src="/static/js/JSZip-2.5.0/jszip.min.js"></script>

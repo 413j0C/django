@@ -25,7 +25,9 @@ $(document).ready(function() {
 				text:      '<i class="fas fa-file-pdf"></i> ',
 				titleAttr: 'Exportar a PDF',
 				className: 'btn btn-danger'
-			},
+			}
 		]	        
     });     
 });
+
+
