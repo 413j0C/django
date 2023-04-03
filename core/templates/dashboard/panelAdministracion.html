@@ -3,97 +3,102 @@
 
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <title>PanelAdministracion</title>
-      <link rel="stylesheet" href="/static/css/graficoChart.css">
-      
-  </head> 
-  </script>
+
+<head>
+  <meta charset="utf-8">
+  <title>PanelAdministracion</title>
+  <link rel="stylesheet" href="/static/css/graficoChart.css">
+
+</head>
+</script>
+
 <body>
-<section>
+  
+  <section>
     <nav>
       <div class="container-fluid">
         <div class="row flex-nowrap">
-        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bgnavbar">
+          <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bgnavbar">
             <div class="d-flex flex-column align-items-center align-items-sm-start px-1 pt-2 text-dark min-vh-100">
-            <a href="{% url 'index' %}" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+              <a href="{% url 'index' %}"
+                class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                 <i class="fa-solid fa-house m-1"></i><span class="fs-5 d-none d-sm-inline">Menu</span>
-            </a>
-            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                <li class="nav-header ms-1 d-none d-sm-inline">Usuarios</li> 
+              </a>
+              <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                <li class="nav-header ms-1 d-none d-sm-inline">Usuarios</li>
                 <li class="nav-item">
-                <a href="{% url 'usuarios_crear' %}" class="nav-link text-dark px-0">
+                  <a href="{% url 'usuarios_crear' %}" class="nav-link text-dark px-0">
                     <i class="fa fa-solid fa-user-plus"></i><span class="ms-1 d-none d-sm-inline">Crear usuarios</span>
-                </a>
+                  </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{% url 'usuarios' %}" class="nav-link text-dark px-0">
-                        <i class="nav-icon fas fa-users"></i><span class="ms-1 d-none d-sm-inline">Ver usuarios</span>
-                    </a>
-                    </li>
+                  <a href="{% url 'usuarios' %}" class="nav-link text-dark px-0">
+                    <i class="nav-icon fas fa-users"></i><span class="ms-1 d-none d-sm-inline">Ver usuarios</span>
+                  </a>
+                </li>
                 <li>
                 <li class="nav-header ms-1 d-none d-sm-inline">Activos</li>
                 <a href="{% url 'activo' %}" class="nav-link px-0 text-dark">
-                    <i class="fa-solid fa-boxes-stacked"></i><span class="ms-1 d-none d-sm-inline">Agregar activo</span>
+                  <i class="fa-solid fa-boxes-stacked"></i><span class="ms-1 d-none d-sm-inline">Agregar activo</span>
                 </a>
                 </li>
-                <li>
-                <a href="{% url 'salir' %}" class="nav-link px-0 text-dark">
-                    <i class="fa-solid fa-right-from-bracket"></i> <span class="ms-1 d-none d-sm-inline">Salir</span></a>
+                <li class="nav-item">
+                  <a href="{% url 'salir' %}" class="nav-link px-0 text-dark">
+                    <i class="fa-solid fa-right-from-bracket"></i> <span
+                      class="ms-1 d-none d-sm-inline">Salir</span></a>
                 </li>
-            </ul>
-            <hr>
-            <div class="dropdown pb-4">
+              </ul>
+              <hr>
+              <div class="dropdown pb-4">
                 <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
-                <span class="d-none d-sm-inline mx-1">{{user.username}}</span>
+                  id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                  <span class="d-none d-sm-inline mx-1">{{user.username}}</span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                <li><a class="dropdown-item" href="#">Perfil</a></li>
-                <li>
+                  <li><a class="dropdown-item" href="#">Perfil</a></li>
+                  <li>
                     <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="{% url 'salir' %}">Salir</a></li>
+                  </li>
+                  <li><a class="dropdown-item" href="{% url 'salir' %}">Salir</a></li>
                 </ul>
+              </div>
             </div>
-            </div>
+          </div>
+          <div class="col py-3 text-center">
+            {% include 'toast.html' %}
+
+          </div>
         </div>
-        <div class="col py-3 text-center">
-          {% include 'toast.html' %}
-         
-        </div>
-        </div>
-    </div>
-  </nav>
-  <!--Graficas ChartJS-->
+      </div>
+    </nav>
+    <!--Graficas ChartJS-->
     <div class="row">
-      <div class="card-header">
+      <div class="card-header col-12">
         <h2>Registros</h2>
       </div>
-      <div class="card-body d-flex flex-wrap col-sm-12 col-md-5 col-lg-4">
-        <h2 class="card-title text-center">Totales</h2>
+        <div class="card-body d-flex flex-wrap col-sm-10 col-md-5 col-lg-4">
+          <h2 class="card-title text-center">Totales</h2>
           <canvas class="container" id="grafico-totales"></canvas>
-      </div>
-      <div class="card-body d-flex flex-wrap col-sm-12 col-md- col-lg-4">
-        <h2 class="card-title text-center">Usuarios</h2>
-            <canvas class="container" id="grafico-usuarios"></canvas>
-      </div>
-      <div class="card-body d-flex flex-wrap col-sm-12 col-md-4 col-lg-4">
-      <h2 class="card-title text-center">Activos</h2>
-        <canvas class="container" id="grafico-activos"></canvas>
-      </div>
-      <div class="card-body d-flex flex-wrap col-sm-12 col-md-4 col-lg-4">
-        <h2 class="card-title text-center">Software</h2>
-        <canvas class="container" id="grafico-software"></canvas>
-      </div>
-      <div class="card-body d-flex flex-wrap col-sm-12 col-md-4 col-lg-4">
-      <h2 class="card-title text-center">Hardware</h2>
+        </div>
+        <div class="card-body d-flex flex-wrap col-sm-10 col-md- col-lg-4">
+          <h2 class="card-title text-center">Usuarios</h2>
+          <canvas class="container" id="grafico-usuarios"></canvas>
+        </div>
+        <div class="card-body d-flex flex-wrap col-sm-10 col-md-4 col-lg-4">
+          <h2 class="card-title text-center">Activos</h2>
+          <canvas class="container" id="grafico-activos"></canvas>
+        </div>
+        <div class="card-body d-flex flex-wrap col-sm-9 col-md-4 col-lg-4">
+          <h2 class="card-title text-center">Software</h2>
+          <canvas class="container" id="grafico-software"></canvas>
+        </div>
+        <div class="card-body d-flex flex-wrap col-sm-10 col-md-4 col-lg-4">
+          <h2 class="card-title text-center">Hardware</h2>
           <canvas class="container" id="grafico-hardware"></canvas>
+        </div>
       </div>
-  </div>
-</section>
+  </section>
 </body>
 <script src="/static/js/chart.js"></script>
 <script src="/static/js/graficosChart.js"></script>
@@ -101,133 +106,134 @@
 <script>
 
   const registroTotales = {
-  
-  labels: ['China', 'EEUU', 'Rusia', 'Alemania'],
-  datasets: [{        
-  data: [4100,1648 ,3500 ,2400 ,6500 ,1500 ],
-  borderWidth: 1,
-  borderColor: '#36A2EB',
-  backgroundColor: [
-  "rgb(0, 123, 177)",
-  "rgb(74, 136, 162)",
-  "rgb(176, 211, 228)",
-  "rgb(250, 172, 130)",
-  ]
-  
-  }],
-  options:{
-  maintainAspectRation: false,
-  responsive: true
+
+    labels: ['China', 'EEUU', 'Rusia', 'Alemania'],
+    datasets: [{
+      data: [4100, 1648, 3500, 2400, 6500, 1500],
+      borderWidth: 1,
+      borderColor: '#36A2EB',
+      backgroundColor: [
+        "rgb(0, 123, 177)",
+        "rgb(74, 136, 162)",
+        "rgb(176, 211, 228)",
+        "rgb(250, 172, 130)",
+      ]
+
+    }],
+    options: {
+      maintainAspectRation: false,
+      responsive: true
+    }
   }
-}
-  
-  
+
+
   const registroUsuario = {
-  
-  labels: ['China', 'EEUU', 'Rusia', 'Alemania', 'India', 'Brasil'],
-  datasets: [{ 
-    label: 'Poblacion Paises', 
-    data: [{x: 10, y: 300,r: 10},{x: 7, y: 250, r:8},{x:6,y:230,r:6},{x:3, y:220, r:5},{x: 9, y:280, r: 8},{x:2 ,y:200 ,r:2}],
-    borderWidth: 1,
-    borderColor: '#36A2EB',
-    backgroundColor: [
-    "rgb(0, 123, 144)",
-    "rgb(74, 105, 162)",
-    "rgb(16, 211, 228)",
-    "rgb(214, 172, 130)",
-    "rgb(187, 40, 44)",
-    "rgb(124, 90, 44)"
-  ]
-  
-  }],
-  options:{
-    maintainAspectRation: false,
-    responsive: true,
-  
+
+    labels: ['China', 'EEUU', 'Rusia', 'Alemania', 'India', 'Brasil'],
+    datasets: [{
+      label: 'Poblacion Paises',
+      data: [{ x: 10, y: 300, r: 10 }, { x: 7, y: 250, r: 8 }, { x: 6, y: 230, r: 6 }, { x: 3, y: 220, r: 5 }, { x: 9, y: 280, r: 8 }, { x: 2, y: 200, r: 2 }],
+      borderWidth: 1,
+      borderColor: '#36A2EB',
+      backgroundColor: [
+        "rgb(0, 123, 144)",
+        "rgb(74, 105, 162)",
+        "rgb(16, 211, 228)",
+        "rgb(214, 172, 130)",
+        "rgb(187, 40, 44)",
+        "rgb(124, 90, 44)"
+      ]
+
+    }],
+    options: {
+      maintainAspectRation: false,
+      responsive: true,
+
+    }
   }
-  }
-  
-  
+
+
   const registroActivo = {
-  
-  labels: ['China', 'EEUU', 'Rusia', 'Alemania', 'India', 'Brasil'],
-  datasets: [{
-    data: [450,250 ,300 ,200 ,600 ,150],
-    borderWidth: 2,
-    borderColor: '#36A2EB',
-    backgroundColor: [
-    "rgb(0, 123, 177)",
-    "rgb(74, 136, 162)",
-    "rgb(176, 211, 228)",
-    "rgb(250, 172, 130)",
-    "rgb(187, 90, 44)",
-    "rgb(127, 90, 44)"
-  ]
-  
-  }],
-  options:{
-    maintainAspectRation: false,
-    responsive: true
+
+    labels: ['China', 'EEUU', 'Rusia', 'Alemania', 'India', 'Brasil'],
+    datasets: [{
+      data: [450, 250, 300, 200, 600, 150],
+      borderWidth: 2,
+      borderColor: '#36A2EB',
+      backgroundColor: [
+        "rgb(0, 123, 177)",
+        "rgb(74, 136, 162)",
+        "rgb(176, 211, 228)",
+        "rgb(250, 172, 130)",
+        "rgb(187, 90, 44)",
+        "rgb(127, 90, 44)"
+      ]
+
+    }],
+    options: {
+      maintainAspectRation: false,
+      responsive: true
+    }
   }
-  }
-  
+
   const registroSoftware = {
-  labels: ['China', 'EEUU', 'Rusia', 'Alemania', 'India', 'Brasil'],
-  datasets: [{
-    label:'Poblacion Paises',
-    data: [450,250 ,300 ,200 ,600 ,150],
-    borderWidth: 2,
-    borderColor: '#36A2EB',
-    backgroundColor: [
-    "rgb(0, 123, 177)",
-    "rgb(74, 136, 162)",
-    "rgb(176, 211, 228)",
-    "rgb(250, 172, 130)",
-    "rgb(187, 90, 44)",
-    "rgb(127, 90, 44)"
-  ]
-  
-  }],
-  options:{
-    maintainAspectRation: false,
-    responsive: true
+    labels: ['China', 'EEUU', 'Rusia', 'Alemania', 'India', 'Brasil'],
+    datasets: [{
+      label: 'Poblacion Paises',
+      data: [450, 250, 300, 200, 600, 150],
+      borderWidth: 2,
+      borderColor: '#36A2EB',
+      backgroundColor: [
+        "rgb(0, 123, 177)",
+        "rgb(74, 136, 162)",
+        "rgb(176, 211, 228)",
+        "rgb(250, 172, 130)",
+        "rgb(187, 90, 44)",
+        "rgb(127, 90, 44)"
+      ]
+
+    }],
+    options: {
+      maintainAspectRation: false,
+      responsive: true
+    }
   }
-  }
-  
+
   const registroHardware = {
-  labels: ['China', 'EEUU', 'Rusia', 'Alemania', 'India', 'Brasil'],
-  datasets: [{
-    label:'Poblacion Paises',
-    data: [450,250 ,300 ,200 ,600 ,150],
-    borderWidth: 2,
-    borderColor: '#36A2EB',
-    backgroundColor: [
-    "rgb(0, 123, 177)",
-    "rgb(74, 136, 162)",
-    "rgb(176, 211, 228)",
-    "rgb(250, 172, 130)",
-    "rgb(187, 90, 44)",
-    "rgb(127, 90, 44)"
-  ]
-  
-  }],
-  options: {
-    maintainAspectRation: false,
-    responsive: true,
-    elements: {
-      line: {
-        borderWidth: 5
+    labels: ['China', 'EEUU', 'Rusia', 'Alemania', 'India', 'Brasil'],
+    datasets: [{
+      label: 'Poblacion Paises',
+      data: [450, 250, 300, 200, 600, 150],
+      borderWidth: 2,
+      borderColor: '#36A2EB',
+      backgroundColor: [
+        "rgb(0, 123, 177)",
+        "rgb(74, 136, 162)",
+        "rgb(176, 211, 228)",
+        "rgb(250, 172, 130)",
+        "rgb(187, 90, 44)",
+        "rgb(127, 90, 44)"
+      ]
+
+    }],
+    options: {
+      maintainAspectRation: false,
+      responsive: true,
+      elements: {
+        line: {
+          borderWidth: 5
+        }
       }
     }
   }
-  }
 
-  renderGraph("grafico-totales",registroTotales,'doughnut')
-  renderGraph("grafico-usuarios",registroUsuario,'bubble')
-  renderGraph("grafico-activos",registroActivo,'polarArea')
-  renderGraph("grafico-software",registroSoftware,'bar')
-  renderGraph("grafico-hardware",registroHardware,'radar')
-  </script>
-  </html>
+  renderGraph("grafico-totales", registroTotales, 'doughnut')
+  renderGraph("grafico-usuarios", registroUsuario, 'bubble')
+  renderGraph("grafico-activos", registroActivo, 'polarArea')
+  renderGraph("grafico-software", registroSoftware, 'bar')
+  renderGraph("grafico-hardware", registroHardware, 'radar')
+</script>
+
 </html>
 
+</html>
